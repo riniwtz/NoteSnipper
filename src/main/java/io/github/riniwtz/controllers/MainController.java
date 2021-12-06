@@ -5,12 +5,12 @@ import io.github.riniwtz.auth.Authentication;
 import io.github.riniwtz.subjects.Subjects;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-
 import javafx.fxml.Initializable;
-import javafx.scene.control.*;
 import javafx.scene.control.Button;
+import javafx.scene.control.ChoiceBox;
 import javafx.stage.Stage;
-import net.dv8tion.jda.api.entities.*;
+import net.dv8tion.jda.api.entities.Guild;
+import net.dv8tion.jda.api.entities.TextChannel;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
@@ -20,7 +20,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.*;
+import java.util.ResourceBundle;
 
 public class MainController implements Initializable {
     @FXML
@@ -41,7 +41,7 @@ public class MainController implements Initializable {
     }
 
     // Screenshot Button
-    public void screenshot(ActionEvent event) {
+    public void screenshot() {
         // Gets the Main Window
         Stage stage = (Stage) SCREENSHOT_BUTTON.getScene().getWindow();
         stage.setIconified(true);

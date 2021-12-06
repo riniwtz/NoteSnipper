@@ -1,6 +1,7 @@
 package io.github.riniwtz.audio;
 
 import javax.sound.sampled.*;
+import java.applet.AudioClip;
 import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
@@ -11,6 +12,7 @@ public class Audio {
     private Clip clip;
 
     public Audio() {
+
         audioMap.put("auth_success", new File(Objects.requireNonNull(getClass().getResource("/io/github/riniwtz/tts/authentication_success.wav")).getFile()));
         audioMap.put("invalid_token", new File(Objects.requireNonNull(getClass().getResource("/io/github/riniwtz/tts/invalid_token.wav")).getFile()));
         audioMap.put("chinese_music", new File(Objects.requireNonNull(getClass().getResource("/io/github/riniwtz/music/xuehuepiaopiao.wav")).getFile()));
